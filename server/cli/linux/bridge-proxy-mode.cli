@@ -1,0 +1,16 @@
+#submode "bridge_proxy"
+
+//add the backend webserver listen http port of bridge-proxy
+bridge <STRING:bridge_name> http <UINT:httpport>
+//add the backend webserver listen https port of bridge-proxy
+bridge <STRING:bridge_name> https <UINT:httpsport>
+//delete the bridge and http port of bridge-proxy
+no bridge <STRING:bridge_name> http <UINT:httpport>
+//delete the bridge and https port of bridge-proxy
+no bridge <STRING:bridge_name> https <UINT:httpsport>
+
+//commit the backend webserver listen port of bridge-proxy
+commit
+
+#endsubmode
+

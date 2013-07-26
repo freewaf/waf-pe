@@ -1,0 +1,21 @@
+//destroy bridge
+no bridge <STRING:br_name>
+//create new bridge
+bridge <STRING:br_name>
+
+#submode "br"
+//add interface to bridge
+interface <STRING:interface_name>
+//delete interface from bridge
+no interface <STRING:interface_name>
+#endsubmode
+
+//add ip address to the interface
+interface <STRING:interface_name> ip-address <IPV4ADDR:ip_address> mask <IPV4ADDR:mask> 
+//delete ip address to the interface
+no interface <STRING:interface_name>
+
+//set interface up
+interface <STRING:interface_name> up
+//set interface down
+interface <STRING:interface_name> down

@@ -1,0 +1,13 @@
+#submode "advance"
+
+//set argument separator
+argument-separator <STRING:character>
+//clear all the argument separator
+no argument-separator
+
+//set cookie format
+cookie-format <LIST:version-0,version-1:version>
+//set cookie format to default(version-0)
+no cookie-format
+
+#endsubmode

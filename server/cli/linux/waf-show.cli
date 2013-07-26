@@ -1,0 +1,54 @@
+//cli for show
+
+//show work mode
+show protect-engine work-mode
+show protect-engine work-mode online bridge-proxy
+show protect-engine work-mode online route-proxy
+show protect-engine work-mode online reverse-proxy
+show protect-engine work-mode offline
+
+//show encode
+show protect-engine encode
+
+//show ip black list
+show protect-engine ip-black-list
+
+//show ip white list
+show protect-engine ip-white-list
+
+//show url black list
+show protect-engine url-black-list
+
+//show url white list
+show protect-engine url-white-list
+
+//show security policy
+show protect-engine security-policy
+show protect-engine security-policy detail
+show protect-engine security-policy <STRING:sp_name> detail
+show protect-engine security-policy <STRING:sp_name> { <LIST:sql-injection-protect,ldap-injection-protect,email-injection-protect,command-injection-protect,code-injection-protect,null-byte-injection-protect,xss-attack-protect,csrf-attack-protect,overflow-attack-protect,file-include-attack-protect,misc-attack-protect,path-traversal-attack-protect,directory-index-protect,spider-scanner-attack-protect,trojan-protect,xml-attack-protect,weak-password-protect,server-version-protect,http-status-code-protect,creditcard-information-protect,server-error-information-protect,program-code-protect,magcard-information-protect,idcard-information-protect,file-download-protect,file-upload-protect,cookie-protect,protocol-param-protect,request-method-protect,keyword-filter,cc-protect:type> }
+show protect-engine security-policy <STRING:sp_name> <LIST:sql-injection-protect,ldap-injection-protect,email-injection-protect,command-injection-protect,code-injection-protect,null-byte-injection-protect,xss-attack-protect,csrf-attack-protect,overflow-attack-protect,file-include-attack-protect,misc-attack-protect,path-traversal-attack-protect,directory-index-protect,spider-scanner-attach-protect,trojan-protect,xml-attack-protect,weak-password-protect,server-version-protect,http-status-code-protect,creditcard-information-protect,server-error-information-protect,program-code-protect,magcard-information-protect,idcard-information-protect,file-download-protect,file-upload-protect,cookie-protect,protocol-param-protect,request-method-protect,keyword-filter,cc-protect:type> detail
+
+//show server policy
+show protect-engine server-policy
+show protect-engine server-policy detail
+show protect-engine server-policy <STRING:spname>
+show protect-engine server-policy <STRING:spname> detail
+
+//show all logs
+show <LIST:attack-log,access-log,admin-log:log_type>
+//show recent hours logs
+show <LIST:attack-log,access-log,admin-log:log_type> recent <UINT:hours>
+//show specified time logs
+show <LIST:attack-log,access-log,admin-log:log_type> start-time <UINT:start_year> <UINT:start_month> <UINT:start_day> <UINT:start_hour> <UINT:start_min> <UINT:start_sec> end-time <UINT:end_year> <UINT:end_month> <UINT:end_day> <UINT:end_hour> <UINT:end_min> <UINT:end_sec>
+
+//show admin log
+
+//show bridge information
+show bridge { <STRING:br_name> }
+
+//show interface ip information
+show interface { <STRING:intf_name> }
+
+//show all configure information
+show running-config

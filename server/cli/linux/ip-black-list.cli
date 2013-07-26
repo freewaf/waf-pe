@@ -1,0 +1,25 @@
+#submode "ipblack"
+
+//add client ip to ip black list
+client ip-address <IPV4ADDR:ipaddr>
+//delete all client ip from ip black list
+no client all 
+//delete specified client ip from ip black list
+no client ip-address <IPV4ADDR:ipaddr>
+
+//set except ip address
+dynamic except ip-address <IPV4ADDR:ipaddr>
+//delete all except ip addresses
+no dynamic except all 
+//delete specified except ip address
+no dynamic except ip-address <IPV4ADDR:ipaddr>
+
+//set timeout
+dynamic timeout <UINT:minutes>
+//set timeout to default(32 min)
+no dynamic timeout
+
+//commit the user configure
+commit
+
+#endsubmode

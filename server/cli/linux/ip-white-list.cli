@@ -1,0 +1,27 @@
+#submode "ipwhite"
+
+//add client ip to ip white list
+client ip-address <IPV4ADDR:ipaddr>
+//delete all client ip address from ip white list
+no client all
+//delete specified client ip address from ip white list
+no client ip-address <IPV4ADDR:ipaddr>
+
+//add server ip to ip white list
+server ip-address <IPV4ADDR:ipaddr>
+//delete all server ip address from ip white list
+no server all 
+//delete specified server ip address from ip white list
+no server ip-address <IPV4ADDR:ipaddr>
+
+//add server host to ip white list
+server host plain-text <STRING:hostname>
+//delete all server hosts from ip white list
+no server host all
+//delete specified server host from ip white list
+no server host plain-text <STRING:hostname>
+
+//commit all the ip white list configure
+commit
+
+#endsubmode

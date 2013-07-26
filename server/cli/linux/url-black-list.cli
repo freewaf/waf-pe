@@ -1,0 +1,25 @@
+#submode "urlblack"
+
+//add url to url black list
+url <LIST:plain-text,regular-exp:options> <STRING:url_string>
+//delete all urls from url black list
+no url all 
+//delete specified url from url black list
+no url <LIST:plain-text,regular-exp:options> <STRING:url_string>
+
+//set the dynamic timeout
+dynamic timeout <UINT:minutes>
+//set the dynamic timeout to default(32 min)
+no dynamic timeout
+
+//set except url
+dynamic except referrer-url <STRING:url_string>
+//delete all except urls
+no dynamic except all 
+//delete specified except urls
+no dynamic except referrer-url <STRING:url_string>
+
+//commit all the url black configures
+commit
+
+#endsubmode

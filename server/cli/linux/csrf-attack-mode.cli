@@ -1,0 +1,16 @@
+#submode "csrf"
+//config csrf cookie-name
+cookie-name plain-text <STRING:cookie_name>
+
+//delete csrf cookie-name
+no cookie-name all
+no cookie-name plain-text <STRING:cookie_name>
+
+//config csrf url
+url <LIST:plain-text,regular-exp:type> <STRING:url_string>
+
+//delete csrf url
+no url all
+no url <LIST:plain-text,regular-exp:type> <STRING:url_string>
+
+#endsubmode

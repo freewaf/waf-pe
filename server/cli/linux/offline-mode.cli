@@ -1,0 +1,21 @@
+#submode "offline"
+
+//add the interface of offline
+interface <STRING:interface_name>
+
+//delete the interface of offline
+no interface <STRING:interface_name>
+
+//add ip address and http port of offline
+ip-address <IPV4ADDR:ipaddr> http <UINT:httpport>
+//add ip address and https port of offline
+ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport>
+//delete ip address and http port of offline
+no ip-address <IPV4ADDR:ipaddr> http <UINT:httpport>
+//delete ip address and https port of offline
+no ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport>
+
+//commit the offline interface and ip address
+commit
+
+#endsubmode

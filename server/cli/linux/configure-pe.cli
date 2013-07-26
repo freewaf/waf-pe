@@ -1,0 +1,59 @@
+#submode "pe"
+
+#include "configure-in.cli"
+
+//configure the online work mode bridge-proxy
+protect-engine work-mode online bridge-proxy
+#include "bridge-proxy-mode.cli"
+
+//configure the online work mode route-proxy
+protect-engine work-mode online route-proxy
+#include "route-proxy-mode.cli"
+
+//configure the online work mode reverse-proxy
+protect-engine work-mode online reverse-proxy
+#include "reverse-proxy-mode.cli"
+
+//configure the offline work mode
+protect-engine work-mode offline 
+#include "offline-mode.cli"
+
+//set work mode to default(route-proxy)
+no protect-engine work-mode
+
+//configure the encoding type
+protect-engine encode <LIST:utf-8,big5,gb2312,gb18030,gbk:encoding_type>
+no protect-engine encode
+
+//configure ip black list
+protect-engine ip-black-list
+#include "ip-black-list.cli"
+
+//configure ip white list
+protect-engine ip-white-list
+#include "ip-white-list.cli"
+
+//configure url black list
+protect-engine url-black-list
+#include "url-black-list.cli"
+
+//configure url white list
+protect-engine url-white-list
+#include "url-white-list.cli"
+
+//delete security policy
+no protect-engine security-policy <STRING:secpname>
+
+//config  security policy
+protect-engine security-policy  <STRING:secpname> 
+#include "security-policy-mode.cli"
+
+//delete the specified server policy
+no protect-engine server-policy <STRING:serpname>
+//config the default server policy
+//protect-engine server-policy
+//config the server policy
+protect-engine server-policy <STRING:serpname>
+#include "server-policy-mode.cli"
+
+#endsubmode

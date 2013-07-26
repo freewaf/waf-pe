@@ -1,0 +1,56 @@
+#submode "sp"
+
+//deploy the security policy
+deploy security-policy <STRING:secpname>
+
+//delete the virt server
+no virt-server ip-address <IPV4ADDR:ipaddr> https <UINT:port>
+//delete the virt server
+no virt-server ip-address <IPV4ADDR:ipaddr> http <UINT:port>
+//configure the reserve proxy
+virt-server ip-address <IPV4ADDR:virt_ipaddr> http <UINT:virt_httpport> real-server ip-address <IPV4ADDR:real_ipaddr> http <UINT:real_httpport>
+//configure the reserve proxy
+virt-server ip-address <IPV4ADDR:virt_ipaddr> https <UINT:virt_httpsport> real-server ip-address <IPV4ADDR:real_ipaddr> https <UINT:real_httpsport>
+
+//delete the real server
+no real-server ip-address <IPV4ADDR:ipaddr> http <UINT:httpport> 
+//delete the real server
+no real-server ip-address <IPV4ADDR:ipaddr> host <STRING:hostname> http <UINT:httpport> 
+//delete the real server
+no real-server ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport> 
+//delete the real server
+no real-server ip-address <IPV4ADDR:ipaddr> host <STRING:hostname> https <UINT:httpport> 
+//configure the {bridge-transparent | route-transparent | offline} proxy
+real-server ip-address <IPV4ADDR:ipaddr> host <STRING:hostname> http <UINT:httpport> 
+//configure the {bridge-transparent | route-transparent | offline} proxy
+real-server ip-address <IPV4ADDR:ipaddr> http <UINT:httpport>
+//configure the {bridge-transparent | route-transparent | offline} proxy
+real-server ip-address <IPV4ADDR:ipaddr> host <STRING:hostname> https <UINT:httpsport> 
+//configure the {bridge-transparent | route-transparent | offline} proxy
+real-server ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport> 
+
+// Enter advanced configure mode
+advanced-configure
+#include "server-policy-advanced-mode.cli"
+
+//enable to record the access log
+access-log enable
+//unable to record the access log
+no access-log enable
+
+//enable to record the attack log
+attack-log enable 
+//enable to record the attack log and set the level
+attack-log enable severity <UINT:level>
+//unable to record the attack log
+no attack-log enable
+
+//set the protect engine detect type
+engine <LIST:detect-block,detect-only:detect_type>
+//set the protect engine detect type to default(detect-only)
+no engine
+
+//commit the server policy
+commit
+
+#endsubmode

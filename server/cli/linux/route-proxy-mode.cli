@@ -1,0 +1,17 @@
+#submode "route_proxy"
+
+//add the backend webserver listen http port of route-proxy
+http <UINT:httpport>
+//add the backend webserver listen https port of route-proxy
+https <UINT:httpsport>
+//delete the backend webserver listen http port of route-proxy
+no http <UINT:httpport>
+//delete the backend webserver listen https port of route-proxy
+no https <UINT:httpsport>
+
+//commit the backend webserver listen port of route-proxy
+commit
+
+#endsubmode
+
+

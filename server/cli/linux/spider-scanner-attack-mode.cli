@@ -1,0 +1,10 @@
+#submode "spider"
+
+//config spider keyword
+keyword plain-text <STRING:keyword>
+
+//delete spider keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

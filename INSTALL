@@ -1,0 +1,113 @@
+﻿                    -*------ utf-8 -------*-
+
+    FreeWAF-PE Installation On Linux Platform(Debian Series)
+    -------------------------------------------------------- 
+    
+    Compilation Preparation    
+    ------------------------------------------------------------------
+    Before compiling PE, need to get the following essential libraries:
+        1)  CLIParser
+             32-bit Desktop: download from http://www.freewaf.org/
+             32-bit Server: download from http://www.freewaf.org/
+             64-bit Server: download from http://www.freewaf.org/
+        2)  apr
+             32-bit Desktop: download from http://www.freewaf.org/
+             32-bit Server: download from http://www.freewaf.org/
+             64-bit Server: download from http://www.freewaf.org/
+        3)  apr-util
+             32-bit Desktop: download from http://www.freewaf.org/
+             32-bit Server: download from http://www.freewaf.org/
+             64-bit Server: download from http://www.freewaf.org/
+        4)  libssh
+             Download from <http://www.libssh2.org/download/libssh2-1.4.1.tar.gz>
+        5)  mysqlclient
+             Platform: Ubuntu 11.04 i686 
+             Lib Name: libmysqlclient-dev
+             Version: 5.1.63
+        6)  pcre
+             Platform: Ubuntu 11.04 i686 
+             Lib Name: libpcre3-dev
+             Version: 8.12
+        7)  xml
+             Platform: Ubuntu 11.04 i686 
+             Lib Name: libxml2-dev 
+             Version: 2.7.8        
+        8)  openssl
+             Platform: Ubuntu 11.04 i686   
+             Lib Name: libssl-dev 
+             Version: 0.9.8          
+        9)  zlib
+             Platform: Ubuntu 11.04 i686   
+             Lib Name: zlib1g-dev  
+             Version: 1:1.2.3.4            
+        10) curl
+             Platform: Ubuntu 11.04 i686   
+             Lib Name: libcurl3  
+             Version: 7.21.3       
+        11) lua
+             Platform: Ubuntu 11.04 i686   
+             Lib Name: liblua5.1-0 
+             Version: 5.1.4-5         
+        12) geoip
+             Platform: Ubuntu 11.04 i686   
+             Lib Name: libgeoip-dev
+             Version: 1.4.7              
+        NOTES:
+             1) Above libraries are got on the debian Linux series by apt-get tools.
+                The rest series of Linux, use the appropriate tools.
+                        
+    Compilation And Installation
+    -----------------------------       
+        ./configure --prefix=PREFIX 
+            --enable-mods-shared="deflate cache disk_cache proxy proxy_http security offline authz_host unique_id" 
+            --with-apr=APR_PREFIX 
+            --with-apr-util=APR_UTIL_PREFIX 
+            --with-cparser=CPARSER_PREFIX
+        make
+        make install
+        NOTES:
+            1) PREFIX，pe install location，such as /usr/local/waf/pe.
+            2) APR_PREFIX, apr download location，such as /usr/local/waf/apr.
+            3) APR_UTIL_PREFIX, apr-util download location, such as /usr/local/waf/apr-util.
+            4) SSH2_PREFIX, libssh2 download location, such as /usr/local/waf/libssh2.
+            5) CPARSER_PREFIX, cparser download location, such as /usr/local/waf/cparser.
+            6) During the compilation, if the gcc cannot find libexpat.so, you need to creat
+               a soft link to it.
+            
+    Running
+    -------
+    Before runing PE, need to install the following tools.
+        1) bridge
+            Platform: Ubuntu 11.04 i686   
+            Lib Name: bridge-utils
+            Version: 1.4          
+        2) iptables
+            Platform: Ubuntu 11.04 i686   
+            Lib Name: iptables
+            Version: 1.4.10 
+        3) ebtables
+            Platform: Ubuntu 11.04 i686   
+            Lib Name: ebtables
+            Version: 2.0.9.2-2
+        4) mysql-server
+            Platform: Ubuntu 11.04 i686   
+            Lib Name: mysql-server
+            Version: 5.1.63
+            Then run the five sql scripts under misc dir.
+            For example, mysql -uusername -ppassword < misc/device_info.sql
+        NOTES：
+             1) Above tools are used on the debian Linux series.
+                The rest series of Linux, use the appropriate tools.
+                              
+    Postscript
+    ----------
+      The FreeWAF Development Group cannot field user's compilation and installation 
+      questions. There are many valuable forums to help you get started. Please refer your
+      questions to the appropriate forum, such as the Users Mailing List at
+        http://www.freewaf.org/upload/forum.php
+        https://sourceforge.net/p/wafw/discussion/pe/
+    
+    Thanks for using FreeWAF, version 1.0.0。
+
+                                                                FreeWAF Development Group
+                                                                 http://www.freewaf.org/

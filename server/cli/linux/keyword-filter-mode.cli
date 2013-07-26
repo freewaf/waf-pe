@@ -1,0 +1,10 @@
+#submode "keyword_filter"
+
+//config keyword_filter keyword
+keyword plain-text <STRING:keyword>
+
+//delete keyword_filter keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

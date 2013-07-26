@@ -1,0 +1,10 @@
+#submode "trojan"
+
+//config trojan keyword
+keyword plain-text <STRING:keyword>
+
+//delete trojan keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

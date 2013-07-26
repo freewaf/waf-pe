@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if test $1 = "addbr"; then
+    brctl addbr $2
+    ifconfig $2 up 
+elif test $1 = "delbr"; then 
+    ifconfig $2 down
+    brctl delbr $2
+elif test $1 = "addif"; then
+    brctl addif $2 $3
+elif test $1 = "delif"; then
+    brctl delif $2 $3
+elif test $1 = "addip"; then
+    ifconfig $2 $3 netmask $4
+elif test $1 = "delip"; then
+    echo $2 | grep -q ':'
+    if test $? -eq 0; then
+        ifconfig $2 down
+    else
+        ifconfig $2 0.0.0.0
+    fi
+elif test $1 = "setif"; then
+    ifconfig $2 $3
+fi

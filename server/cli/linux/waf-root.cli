@@ -1,0 +1,5 @@
+//this is top cli files
+
+//enter configure submode
+enable
+#include "root-configure.cli"

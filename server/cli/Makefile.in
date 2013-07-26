@@ -1,0 +1,5 @@
+
+SUBDIRS = $(CLI_SUBDIR_NAME)
+
+include $(top_builddir)/build/rules.mk
+

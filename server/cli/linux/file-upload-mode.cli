@@ -1,0 +1,22 @@
+#submode "fileup"
+
+//config fileup file-type
+file-type plain-text <STRING:extension_string>
+
+//delete fileup file-type
+no file-type all
+no file-type plain-text <STRING:extension_string>
+
+//config individual-file-size
+individual-file-size { <UINT:number> }
+
+//config individual-file-size default
+no individual-file-size
+
+//config all-file-size
+all-file-size { <UINT:number> }
+
+//config individual-file-size default
+no all-file-size
+
+#endsubmode

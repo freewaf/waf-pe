@@ -1,0 +1,11 @@
+
+LTLIBRARY_NAME    = libconvert.la
+LTLIBRARY_SOURCES = convert_init.c convert_policy.c convert_subpolicy.c \
+	convert_sql_injection.c convert_protocol_param.c convert_file_upload.c convert_file_download.c \
+    convert_request_method.c convert_black_white.c bitmap.c combind_rule.c convert_server_version.c \
+	convert_iccard_information.c convert_modify_check_value.c convert_add_check_value.c \
+	convert_add_two_keyword.c convert_idcard_information.c convert_xss_attack.c convert_spider.c \
+    convert_keyword_filter.c convert_cookie.c convert_command.c convert_weak_passwd.c convert_trojan.c \
+    convert_cc_protect.c convert_code_injection.c convert_csrf.c convert_tools.c
+
+include $(top_srcdir)/build/ltlib.mk

@@ -1,0 +1,10 @@
+#submode "code"
+
+//config code keyword
+keyword plain-text <STRING:keyword>
+
+//delete code keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

@@ -1,0 +1,5 @@
+LTLIBRARY_NAME    = libcli.la
+
+LTLIBRARY_SOURCES = cparser_tree.c cparser_show_tree.c pe_cli.c cli_global.c cli_log.c cli_server_policy.c cli_black_white_list.c cli_security_policy_interface.c  cli_security_policy_keyword.c cli_security_policy_mode.c cli_interface.c
+
+include $(top_srcdir)/build/ltlib.mk

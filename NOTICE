@@ -1,0 +1,48 @@
+FreeWAF
+Copyright 2013 FreeWAF Development Team.
+
+This product includes software developed at
+The FreeWAF Development Team (http://www.freewaf.org/).
+
+Portions of this software were developed at the National Center
+for Supercomputing Applications (NCSA) at the University of
+Illinois at Urbana-Champaign.
+
+This software contains code derived from the RSA Data Security
+Inc. MD5 Message-Digest Algorithm, including various
+modifications by Spyglass Inc., Carnegie Mellon University, and
+Bell Communications Research, Inc (Bellcore).
+
+Regular expression support is provided by the PCRE library package,
+which is open source software, written by Philip Hazel, and copyright
+by the University of Cambridge, England. The original software is
+available from
+   ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+   
+Lua support is provided by the Lua library package,
+which is open source software, copyright at Lua.org, PUC-Rio
+The original software is available from
+   http://www.lua.org
+
+Curl support is provided by the curl library package,
+which is open source software, copyright at Daniel Stenberg<daniel@haxx.se>.
+The original software is available from
+   http://curl.haxx.se/download.html 
+   
+Zlib support is provided by the zlib library package,
+which is open source software, written by Jean-loup Gailly (compression) and Mark Adler
+The original software is available from
+   http://zlib.net/
+
+Ssl support is provided by the libssl library package,
+which is open source software, written by Jean-loup Gailly (compression) and Mark Adler
+The original software is available from
+   http://www.openssl.org/
+   
+Xml support is provided by the libxml library package,
+which is open source software, copyright at Daniel Veillard
+The original software is available from
+   http://www.xml.com/   
+   
+Thanks authors of libgeoip and libmysqlclient. Sorry that we cannot list your names in this file,
+beacuse we have not found your real names.

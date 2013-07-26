@@ -1,0 +1,208 @@
+#submode "scp"
+
+//add sql mode
+sql-injection-protect
+sql-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+sql-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+sql-injection-protect <LIST:enable,disable:option>
+#include "sql-injection-mode.cli"
+
+//add wpd mode
+weak-password-protect
+weak-password-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+weak-password-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+weak-password-protect <LIST:enable,disable:option>
+#include "weak-password-mode.cli"
+
+//add ldap-injection command
+ldap-injection-protect 
+ldap-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+ldap-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+ldap-injection-protect <LIST:enable,disable:option>
+
+//add email-injection command
+email-injection-protect
+email-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+email-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+email-injection-protect <LIST:enable,disable:option>
+
+//add command-injection-mode
+command-injection-protect
+command-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+command-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+command-injection-protect <LIST:enable,disable:option>
+#include "command-injection-mode.cli"
+
+//add code-injection-mode
+code-injection-protect
+code-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+code-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+code-injection-protect <LIST:enable,disable:option>
+#include "code-injection-mode.cli"
+
+//add null-byte-injection command
+null-byte-injection-protect
+null-byte-injection-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+null-byte-injection-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+null-byte-injection-protect <LIST:enable,disable:option>
+
+//add xss-attack-mode
+xss-attack-protect
+xss-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+xss-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+xss-attack-protect <LIST:enable,disable:option>
+#include "xss-attack-mode.cli"
+
+//add csrf-attack command
+csrf-attack-protect
+csrf-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+csrf-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+csrf-attack-protect <LIST:enable,disable:option>
+#include "csrf-attack-mode.cli"
+
+//add overflow-attack command
+overflow-attack-protect
+overflow-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+overflow-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+overflow-attack-protect <LIST:enable,disable:option>
+
+//add file-include-attack command
+file-include-attack-protect
+file-include-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+file-include-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+file-include-attack-protect <LIST:enable,disable:option>
+
+// add misc-attack command
+misc-attack-protect
+misc-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+misc-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+misc-attack-protect <LIST:enable,disable:option>
+
+//add path-traversal-attack command
+path-traversal-attack-protect
+path-traversal-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+path-traversal-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+path-traversal-attack-protect <LIST:enable,disable:option>
+
+//add directory-index command
+directory-index-protect 
+directory-index-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+directory-index-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+directory-index-protect <LIST:enable,disable:option>
+
+//add spider-scanner-attack-mode
+spider-scanner-attack-protect
+spider-scanner-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+spider-scanner-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+spider-scanner-attack-protect <LIST:enable,disable:option>
+#include "spider-scanner-attack-mode.cli"
+
+//add trojan-mode
+trojan-protect
+trojan-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+trojan-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+trojan-protect <LIST:enable,disable:option>
+#include "trojan-mode.cli"
+
+//add xml-attack command
+xml-attack-protect 
+xml-attack-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+xml-attack-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+xml-attack-protect <LIST:enable,disable:option>
+
+//add http-status-code command
+http-status-code-protect
+http-status-code-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+http-status-code-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+http-status-code-protect <LIST:enable,disable:option>
+
+//add server-error-information command
+server-error-information-protect
+server-error-information-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+server-error-information-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+server-error-information-protect <LIST:enable,disable:option>
+
+//add program-code command
+program-code-protect
+program-code-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+program-code-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+program-code-protect <LIST:enable,disable:option>
+
+//add magcard-information command
+magcard-information-protect
+magcard-information-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+magcard-information-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+magcard-information-protect <LIST:enable,disable:option>
+
+
+//add server-version-mode
+server-version-protect
+server-version-protect log { <LIST:enable,disable:option> }
+server-version-protect <LIST:enable,disable:option>
+#include "server-version-mode.cli"
+
+//add creditcard-information-mode
+creditcard-information-protect
+creditcard-information-protect log { <LIST:enable,disable:option> }
+creditcard-information-protect <LIST:enable,disable:option>
+#include "creditcard-information-mode.cli"
+
+//add idcard-information-mode
+idcard-information-protect
+idcard-information-protect log { <LIST:enable,disable:option> }
+idcard-information-protect <LIST:enable,disable:option>
+#include "idcard-information-mode.cli"
+
+//add file-download-mode
+file-download-protect
+file-download-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+file-download-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+file-download-protect <LIST:enable,disable:option>
+#include "file-download-mode.cli"
+
+//add file-updown-mode
+file-upload-protect
+file-upload-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+file-upload-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+file-upload-protect <LIST:enable,disable:option>
+#include "file-upload-mode.cli"
+
+//add cookie-mode
+cookie-protect
+cookie-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+cookie-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+cookie-protect <LIST:enable,disable:option>
+#include "cookie-mode.cli"
+
+//add protocol-param-mode
+protocol-param-protect
+protocol-param-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+protocol-param-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+protocol-param-protect <LIST:enable,disable:option>
+#include "protocol-param-mode.cli"
+
+//add request-method-mode
+request-method-protect
+request-method-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+request-method-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+request-method-protect <LIST:enable,disable:option>
+#include "request-method-mode.cli"
+
+//add keyword-filter-mode
+keyword-filter
+keyword-filter action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+keyword-filter action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+keyword-filter <LIST:enable,disable:option>
+#include "keyword-filter-mode.cli"
+
+//add cc-mode
+cc-protect
+cc-protect action <LIST:drop,deny,pass:action> { <LIST:enable,disable:option> }
+cc-protect action <LIST:drop,deny,pass:action> log { <LIST:enable,disable:option> }
+cc-protect <LIST:enable,disable:option>
+#include "cc-mode.cli"
+
+//commit
+commit
+
+#endsubmode "scp"

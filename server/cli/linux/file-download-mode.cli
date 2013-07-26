@@ -1,0 +1,10 @@
+#submode "filedown"
+
+//config filedown file-type
+file-type plain-text <STRING:extension_string>
+
+//delete filedown file-type
+no file-type all
+no file-type plain-text <STRING:extension_string>
+
+#endsubmode

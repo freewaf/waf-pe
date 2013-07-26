@@ -1,0 +1,10 @@
+#submode "cmd"
+
+//config cmd keyword
+keyword plain-text <STRING:keyword>
+
+//delete cmd keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

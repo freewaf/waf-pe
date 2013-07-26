@@ -1,0 +1,6 @@
+# a modules Makefile has no explicit targets -- they will be defined by
+# whatever modules are enabled. just grab special.mk to deal with this.
+include $(top_srcdir)/build/special.mk
+all:
+	chmod u+x msc_build_version.sh
+	./msc_build_version.sh msc_release.h

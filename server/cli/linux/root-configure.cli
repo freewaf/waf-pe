@@ -1,0 +1,30 @@
+//this is config cli files
+
+#submode "st"
+
+//save config
+write
+
+//load config
+load
+
+//enter submode
+configure
+#include "configure-pe.cli"
+
+//clear log
+clear log <LIST:all,access_log,attack_log,admin_log:log_type>
+
+//clear all the black urls
+clear url-black-list dynamic all 
+
+//clear the specified  black urls
+clear url-black-list dynamic referrer-url <STRING:url_string>
+
+//clear all the black ip address
+clear ip-black-list dynamic all 
+
+//clear the specified black ip address
+clear ip-black-list dynamic ip-address <IPV4ADDR:ipaddr>
+
+#endsubmode

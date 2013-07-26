@@ -1,0 +1,19 @@
+#submode "cc"
+
+//config source-ip access-rate 
+no source-ip access-rate 
+source-ip access-rate statistic-cycle <UINT:seconds> request-times <UINT:times>
+
+//config source-ip status-408-rate
+no source-ip status-408-rate
+source-ip status-408-rate statistic-cycle <UINT:seconds> response-times <UINT:times>
+
+//config referrer-url access-rate
+no referrer-url access-rate
+referrer-url access-rate statistic-cycle <UINT:seconds> request-times <UINT:times>
+
+//config url access-rate
+url-page
+#include "cc-url.cli"
+
+#endsubmode

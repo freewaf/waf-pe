@@ -1,0 +1,59 @@
+#submode "protocol"
+
+//config request-header-num
+request-header-num <UINT:number>
+request-header-num
+
+//config request-header-num default
+no  request-header-num
+
+//config header-size-except-cookie
+header-size-except-cookie { <UINT:number> }
+
+//config header-size-except-cookie default
+no header-size-except-cookie
+
+//config cookie-size
+cookie-size { <UINT:number> }
+
+//config cookie-size default
+no cookie-size
+
+//config request-url-size
+request-url-size { <UINT:number> }
+
+//config request-url-siz default
+no request-url-size
+
+//config query-string-size
+query-string-size { <UINT:number> }
+
+//config request-url-siz default
+no query-string-size
+
+//config request-argument-name-size
+request-argument-name-size { <UINT:number> }
+
+//config request-argument-name-size default
+no request-argument-name-size
+
+//config request-argument-name-value-size
+request-argument-name-value-size { <UINT:number> }
+
+//config request-argument-name-value-size default
+no request-argument-name-value-size
+
+//config request-argument-num
+request-argument-num { <UINT:number> }
+
+//config request-argument-num default
+no request-argument-num
+
+//config request-body-size 
+request-body-size { <UINT:number> }
+
+//config request-argument-size default
+no request-body-size
+
+#endsubmode
+

@@ -1,0 +1,31 @@
+#submode "cookie"
+
+//config cookie-name
+cookie-name plain-text <STRING:extension_string>
+
+//delete fileup file-type
+no cookie-name all
+no cookie-name plain-text <STRING:extension_string>
+
+//config expire-time
+expire-time <UINT:minutes>
+
+//config expire-time default
+no expire-time
+
+//config verification-method
+verification method <LIST:signature,encryption:method> content <LIST:cookie,ip-and-cookie:type>
+
+//config verification-method default
+no verification
+
+//add attribution
+attribution secure
+attribution secure httponly
+attribution httponly
+
+
+// no attribution
+no attribution
+
+#endsubmode

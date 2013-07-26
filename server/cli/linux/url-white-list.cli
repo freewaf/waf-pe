@@ -1,0 +1,13 @@
+#submode "urlwhite"
+
+//add url to url white list
+url <LIST:plain-text,regular-exp:options> <STRING:url_string>
+//delete all urls from url white list
+no url all 
+//delete specified url from url white list
+no url <LIST:plain-text,regular-exp:options> <STRING:url_string>
+
+//commit the url white configure
+commit
+
+#endsubmode

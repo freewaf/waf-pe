@@ -1,0 +1,12 @@
+#submode "cc_url"
+
+//config url access-rate
+access-rate statistic-cycle <UINT:seconds> request-times <UINT:times>
+no access-rate statistic-cycle
+
+//config url page
+url <LIST:plain-text,regular-exp:type> <STRING:url_string>
+no url all
+no url <LIST:plain-text,regular-exp:type> <STRING:url_string>
+
+#endsubmode

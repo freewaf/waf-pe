@@ -1,0 +1,10 @@
+#submode "method"
+
+//config method 
+method plain-text <STRING:method>
+
+//delete method
+no method all
+no method plain-text <STRING:method>
+
+#endsubmode

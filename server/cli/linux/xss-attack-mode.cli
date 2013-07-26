@@ -1,0 +1,10 @@
+#submode "xss"
+
+//config xss keyword
+keyword plain-text <STRING:keyword>
+
+//delete xss keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

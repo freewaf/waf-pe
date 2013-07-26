@@ -1,0 +1,15 @@
+#submode "reverse_proxy"
+
+//add the listen ip address and http port of reverse-proxy
+ip-address <IPV4ADDR:ipaddr> http <UINT:httpport>
+//add the listen ip address and https port of reverse-proxy
+ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport>
+//delete the listen ip address and http port of reverse-proxy
+no ip-address <IPV4ADDR:ipaddr> http <UINT:httpport>
+//delete the listen ip address and https port of reverse-proxy
+no ip-address <IPV4ADDR:ipaddr> https <UINT:httpsport>
+
+//commit the listen ip address and http port of reverse-proxy
+commit
+
+#endsubmode

@@ -1,0 +1,10 @@
+#submode "sql"
+
+//config sql keyword
+keyword plain-text <STRING:keyword>
+
+//delete sql keyword
+no keyword all
+no keyword plain-text <STRING:keyword>
+
+#endsubmode

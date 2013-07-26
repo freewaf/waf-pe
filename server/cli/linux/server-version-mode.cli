@@ -1,0 +1,10 @@
+#submode "server_version"
+
+//config server-version keyword
+keyword substitute plain-text <STRING:new_string> for regular-exp <STRING:old_string>
+
+//delete trojan keyword
+no keyword all
+no keyword regular-exp <STRING:old_string>
+
+#endsubmode

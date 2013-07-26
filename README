@@ -1,0 +1,64 @@
+                       -*------ utf-8 -------*-
+                  
+                  
+                        PE(Protection Engine)
+
+  What is it?
+  -----------
+  
+  Protection engine is a core function of FreeWAF software. 
+  As web applications become more and more abundant, the web 
+  server with its powerful computing capacity, processing 
+  properties and the aggregates containing high value gradually 
+  become hackers' main target. Protection engine execute a 
+  series of detection to protect web servers with the 
+  HTTP/HTTPS security strategies. It can deal with all kinds 
+  of security threats in the Web application, such as SQL injection, 
+  XSS, CSRF, Cookie poisoning and more attacks, etc.
+  
+  
+  The Latest Version
+  ------------------
+
+  Details of the latest version can be found on the FreeWAF
+  website page under <http://www.freewaf.org/>.
+
+  
+  Documentation
+  -------------
+
+  The documentation available as of the date of this release 
+  can be found at 
+  <http://www.freewaf.org/the-product-download-and-service/>.
+  
+  
+  Installation
+  ------------
+
+  Please see the file called INSTALL.
+  
+  
+  Licensing
+  ---------
+
+  Please see the file called LICENSE.GPLv2.
+  
+  
+  Contacts
+  --------
+     o If you want to be informed about new code releases, bug fixes,
+       function fixes, general news and information about the FreeWAF
+       open the <http://www.freewaf.org>.
+
+     o If you have a concrete bug report for FreeWAF, please go to the
+       FreeWAF Bug System and submit your report:
+       <http://www.freewaf.org/bug/>
+
+     o If you develop new function, the function can be submitted 
+       to the Feature Patches forum of Tickets at 
+       <http://www.freewaf.org/upload/forum.php>. The FreeWAF team will review
+       it, in through the audit, as you will submit its to the code 
+       repository.    
+           
+     o If you want to communicate with FreeWAF developers real-time, 
+       join the QQ group: 196138446.
